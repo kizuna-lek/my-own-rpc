@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include "user.pb.h"
+#include "rpcapplication.h"
+#include "rpcprovider.h"
 
 
 class UserService : public fixBug::UserServiceRpc{
@@ -39,6 +41,15 @@ public:
 
 
 int main(int argc, char **argv) {
+    // 调用框架初始化
+    RpcApplication::Init(argc, argv);
+
+    // 将UserService对象发布到rpc节点
+    RpcProvider provider;
+    provider.NotifyService(new UserService());
+
+    // 启动一个rpc服务发布节点, run之后进程进入阻塞状态，等待远程rpc调用
+    provider.Run();
 
     return 0;
 }
