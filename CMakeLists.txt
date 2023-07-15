@@ -13,5 +13,7 @@ include_directories(${PROJECT_SOURCE_DIR}/example)
 # 项目库文件的搜索路径 -L
 link_directories(${PROJECT_SOURCE_DIR}/lib)
 
+# src包含了rpc框架所有的相关代码
 add_subdirectory(src)
+# example包含了rpc框架使用的实例代码
 add_subdirectory(example)
