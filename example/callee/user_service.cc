@@ -1,15 +1,16 @@
 #include <iostream>
 #include <string>
-#include "user.pb.h"
+#include "../user.pb.h"
 #include "rpcapplication.h"
 #include "rpcprovider.h"
 
 
-class UserService : public fixBug::UserServiceRpc{
+class UserService: public fixBug::UserServiceRpc{
 public:
     bool Login(std::string name, std::string pwd){
         std::cout << "doing local service Login" << std::endl;
         std::cout << "name:" << name << " pwd:" << pwd << std::endl;
+        return true;
     }
 
     /*
