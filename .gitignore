@@ -3,5 +3,5 @@ cmake-build-debug-remote
 *.out
 build
 lib
-./vscode
+bin
 
