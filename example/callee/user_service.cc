@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../user.pb.h"
+#include "user.pb.h"
 #include "rpcapplication.h"
 #include "rpcprovider.h"
 

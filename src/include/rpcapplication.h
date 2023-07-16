@@ -6,7 +6,7 @@ public:
     static void Init(int argc, char **argv);
     static RpcApplication& GetInstance();
 private:
-    RpcApplication();
+    RpcApplication(){};
     RpcApplication(const RpcApplication&) = delete;
     RpcApplication(RpcApplication&&) = delete;
 };
