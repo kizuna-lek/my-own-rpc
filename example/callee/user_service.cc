@@ -3,6 +3,7 @@
 #include "user.pb.h"
 #include "rpcapplication.h"
 #include "rpcprovider.h"
+#include "rpcconfig.h"
 
 
 class UserService: public fixBug::UserServiceRpc{
